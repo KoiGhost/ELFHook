@@ -301,7 +301,8 @@ int main(int argc,char *argv[])
         return 0;
     }
 
-    
+    /* Main process to get relevant PLT address of function */
+    /--------------------------------------------------------/
     int idx = 0;
     uint32_t dop_addr = 0, dsm_addr = 0;
     uint32_t rel_begin = rel_table[0].r_offset;
@@ -333,7 +334,9 @@ int main(int argc,char *argv[])
         printf("cant find dlopen or dlsym funtion\n");
         return 0;
     }
+    /--------------------------------------------------------/
 
+        
     // compute the RVA
     uint32_t tmp_addr = 0;
 
